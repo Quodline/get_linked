@@ -8,7 +8,14 @@ body {
 }
 
 .navbar-link {
-    @apply font-inter text-[1.8rem] font-medium pt-4 -tracking-widest lg:font-montserrat lg:text-[1.6rem] lg:font-normal lg:ml-[5.6rem];
+    @apply font-inter text-[1.8rem] font-medium pt-4 -tracking-widest lg:tracking-normal lg:font-montserrat lg:text-[1.6rem] lg:font-normal lg:ml-[5.6rem];
+}
+
+.navbar-link.active {
+    background: linear-gradient(90deg, #903AFF 3.08%, #FF26B9 93.85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .countdown {
@@ -41,4 +48,9 @@ body {
 
 .judges-criteria h4 {
     @apply inline text-brand-pink font-bold text-[1.3rem] lg:text-[1.6rem] leading-[2.26rem];
+}
+
+.timeline-event-number {
+    @apply rounded-full w-[1.93rem] h-[1.93rem] inline-grid place-items-center font-bold text-[1.2rem];
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
 }

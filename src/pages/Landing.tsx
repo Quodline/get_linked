@@ -6,11 +6,17 @@ import rulesAndGuidelines from '../assets/rules and guidelines.png';
 import judges from '../assets/judges.png';
 import thinkingMan from '../assets/thinking_man.png';
 import Header from "../components/Header.tsx";
+import Countdown from "../components/Landing/Countdown.tsx";
+import FaqAccordion from "../components/Landing/FaqAccordion.tsx";
+import faqs from "../data/faqs.ts";
+import TimelineEvent from "../components/Landing/TimelineEvent.tsx";
+import events from "../data/timeline.ts";
+import {Link} from "react-router-dom";
 
 function Landing() {
     return <>
         <header className="flex flex-col min-h-[85.5rem] lg:min-h-[90rem]">
-            <Header/>
+            <div className="border-b border-fade-gray "><Header/></div>
 
             <div className="flex-1 banner flex flex-col items-center lg:items-start lg:pl-[12.8rem] bg-[url('/Hackathon%20guy.png')] bg-contain lg:bg-auto lg:bg-right-bottom bg-no-repeat bg-bottom">
                 <h1 className="mt-[3.1rem] font-montserrat text-[1.6rem] italic font-bold lg:self-end lg:text-[3.6rem] lg:pr-[5.5rem]">
@@ -27,12 +33,8 @@ function Landing() {
                 </div>
                 <p className="font-montserrat text-[1.3rem] leading-[2.16rem] px-[6.3rem] lg:text-[2rem] lg:leading-[3.32rem] lg:px-0 lg:max-w-[52.2rem] text-center lg:text-left">
                     Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
-                <button className="mt-[2.4rem] lg:mt-[4.1rem] button-primary">Register</button>
-                <div className="countdown">
-                    <div className="countdown-item">00<small>H</small>&nbsp;&nbsp;</div>
-                    <div className="countdown-item">00<small>M</small>&nbsp;&nbsp;</div>
-                    <div className="countdown-item">00<small>S</small></div>
-                </div>
+                <Link to="/register" className="mt-[2.4rem] lg:mt-[4.1rem] button-primary">Register</Link>
+                <Countdown />
             </div>
         </header>
         <section className="banner-section">
@@ -109,16 +111,31 @@ function Landing() {
             </div>
         </section>
         <section className="banner-section flex flex-col lg:flex-row lg:items-center">
-            <div className="section-content px-[4.5rem] lg:pl-[18.4rem] lg:basis-1/2">
+            <div className="section-content pt-[6rem] px-[4.5rem] lg:pl-[18.4rem] lg:basis-1/2">
                 <h3 className="text-center lg:text-left">
                     Frequently Asked<br/><span className="text-brand-pink">Question</span>
                 </h3>
-                <p className="leading-[2.75rem] text-center lg:text-left">
+                <p className="section-content-text">
                     We got answers to the questions that you might
-                    want to ask about getlinked Hackathon 1.0</p>
+                    want to ask about <strong className="font-bold">getlinked Hackathon 1.0</strong></p>
+                <FaqAccordion items={faqs}/>
             </div>
-            <div className="flex justify-start px-[4.8rem] py-[1rem] lg:basis-1/2 lg:order-1">
+            <div className="flex justify-start px-[4.8rem] py-[4.9rem] lg:px-0 lg:py-[3.9rem] lg:basis-1/2 lg:order-1">
                 <img src={thinkingMan} alt=""/>
+            </div>
+        </section>
+        <section className="banner-section flex flex-col">
+            <div className="section-content py-[8rem] px-[4.5rem] lg:pl-[18.4rem] lg:basis-1/2">
+                <h3 className="text-center">Timeline</h3>
+                <p className="section-content-text text-[1.4rem] leading-[2.41rem] mb-[5.6rem] lg:text-center lg:w-[34.6rem] lg:mx-auto">
+                    Here is the breakdown of the time we
+                    anticipate using for the upcoming event.</p>
+                <div className="flex flex-col space-y-[2.3rem]">
+                    {events.map((event, idx) =>
+                        <TimelineEvent key={idx} id={idx+1} title={event.title} description={event.description}
+                                       date={event.date}/>
+                    )}
+                </div>
             </div>
         </section>
     </>
