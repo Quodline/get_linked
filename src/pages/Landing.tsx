@@ -5,7 +5,7 @@ import theBigIdea from '../assets/the big idea 1.png';
 import rulesAndGuidelines from '../assets/rules and guidelines.png';
 import judges from '../assets/judges.png';
 import thinkingMan from '../assets/thinking_man.png';
-import Header from "../components/Header.tsx";
+import Header from "../components/Landing/Header.tsx";
 import Countdown from "../components/Landing/Countdown.tsx";
 import FaqAccordion from "../components/Landing/FaqAccordion.tsx";
 import faqs from "../data/faqs.ts";

@@ -5,7 +5,7 @@ import {ReactNode, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 
 interface Prop {
-    registerButtonComponent: ReactNode
+    registerButtonComponent?: ReactNode
 }
 
 function Header({registerButtonComponent}: Prop) {
@@ -24,7 +24,7 @@ function Header({registerButtonComponent}: Prop) {
                 <a className="navbar-link" href="#">Timeline</a>
                 <a className="navbar-link" href="#">Overview</a>
                 <a className="navbar-link" href="#">FAQs</a>
-                <a className={cn("navbar-link", {active: location.pathname === '/contact'})} href="/contact">Contact</a>
+                <a className={cn("navbar-link", {active: location.pathname === '/contact'})} href="/src/pages/Contact">Contact</a>
             </div>
             {registerButtonComponent ||
                 <Link to="/register" className="hidden lg:inline button-primary">Register</Link>}
@@ -48,7 +48,7 @@ function Header({registerButtonComponent}: Prop) {
                 <a className="navbar-link" href="#">Timeline</a>
                 <a className="navbar-link" href="#">Overview</a>
                 <a className="navbar-link" href="#">FAQs</a>
-                <a className="navbar-link" href="/contact">Contact</a>
+                <a className="navbar-link" href="/src/pages/Contact">Contact</a>
             </div>
             <Link to="/register" className="button-primary">Register</Link>
         </nav>

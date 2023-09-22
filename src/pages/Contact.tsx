@@ -5,7 +5,7 @@ import xIcon from "../assets/twitter.svg";
 import fbIcon from "../assets/facebook.svg";
 import linkedIcon from "../assets/ri_linkedin-fill.svg";
 import {Link} from "react-router-dom";
-import Header from "../components/Header.tsx";
+import Header from "../components/Landing/Header.tsx";
 
 function Contact() {
     return <header className="flex flex-col min-h-screen">
