@@ -19,3 +19,7 @@ html {
             #FE34B9 100%
     );
 }
+
+body {
+    @apply bg-brand-dark text-white font-montserrat text-[1.3rem] font-normal leading-normal;
+}

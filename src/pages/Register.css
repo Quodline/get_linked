@@ -1,0 +1,23 @@
+header {
+    background-blend-mode: saturation;
+    background: #150E28ee url('/Purple-Lens-Flare-PNG.png') calc(100% + 50rem) calc(100% + 40rem) / contain no-repeat;
+}
+
+.mobile-view {
+    background-blend-mode: saturation;
+    background: #150E28ee url('/Purple-Lens-Flare-PNG.png') -50vw top / 150vw 120vw no-repeat;
+}
+
+.left-image {
+    background-blend-mode: saturation;
+    background: #150E28ee url('/Purple-Lens-Flare-PNG.png') -31.25rem calc(50% - 10.9rem) / 125% no-repeat;
+}
+
+.input-control {
+    @apply px-[2.7rem] py-[1rem] text-[1.3rem] rounded-[.4rem] border border-white bg-[#FFFFFF07] resize-none w-full;
+    box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.form-group {
+    @apply flex flex-col space-y-[.5rem] lg:flex-1;
+}
