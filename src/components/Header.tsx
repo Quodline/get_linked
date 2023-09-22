@@ -40,7 +40,7 @@ function Header({registerButtonComponent}: Prop) {
             })}>
             <div className="px-[5.1rem] py-[3.9rem] flex justify-end">
                 <button onClick={() => setShowNav(false)}
-                        className="w-[2.3rem] h-[2.3rem] inline-grid place-items-center bg-[url('/gradient-circle.svg')]">
+                        className="w-[2.3rem] h-[2.3rem] inline-grid place-items-center bg-[url('./assets/gradient-circle.svg')]">
                     <img src={iconTimes} alt="Close"/>
                 </button>
             </div>

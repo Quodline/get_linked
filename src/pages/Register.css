@@ -1,11 +1,11 @@
 header {
     background-blend-mode: saturation;
-    background: #150E28ee url('/Purple-Lens-Flare-PNG.png') calc(100% + 50rem) calc(100% + 40rem) / contain no-repeat;
+    background: #150E28ee url('./assets/Purple-Lens-Flare-PNG.png') calc(100% + 50rem) calc(100% + 40rem) / contain no-repeat;
 }
 
 .mobile-view {
     background-blend-mode: saturation;
-    background: #150E28ee url('/Purple-Lens-Flare-PNG.png') -50vw top / 150vw 120vw no-repeat;
+    background: #150E28ee url('./assets/Purple-Lens-Flare-PNG.png') -50vw top / 150vw 120vw no-repeat;
 }
 
 .left-image {

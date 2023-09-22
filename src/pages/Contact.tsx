@@ -10,7 +10,7 @@ import Header from "../components/Landing/Header.tsx";
 function Contact() {
     return <header className="flex flex-col min-h-screen">
         <div className="mobile-view lg:hidden">
-            <Link to="/" className="w-[2.3rem] h-[2.3rem] mx-[5.1rem] my-[4.7rem]  inline-grid place-items-center bg-[url('/gradient-circle.svg')]">
+            <Link to="/" className="w-[2.3rem] h-[2.3rem] mx-[5.1rem] my-[4.7rem]  inline-grid place-items-center bg-[url('./assets/gradient-circle.svg')]">
                 <img src={iconAngleLeft} alt="Back"/>
             </Link>
             <div className="flex flex-col mx-[4.9rem] leading-normal">

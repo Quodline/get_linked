@@ -18,7 +18,7 @@ function Landing() {
         <header className="flex flex-col min-h-[85.5rem] lg:min-h-[90rem]">
             <div className="border-b border-fade-gray "><Header/></div>
 
-            <div className="flex-1 banner flex flex-col items-center lg:items-start lg:pl-[12.8rem] bg-[url('/Hackathon%20guy.png')] bg-contain lg:bg-auto lg:bg-right-bottom bg-no-repeat bg-bottom">
+            <div className="flex-1 banner flex flex-col items-center lg:items-start lg:pl-[12.8rem] bg-[url('./assets/Hackathon%20guy.png')] bg-contain lg:bg-auto lg:bg-right-bottom bg-no-repeat bg-bottom">
                 <h1 className="mt-[3.1rem] font-montserrat text-[1.6rem] italic font-bold lg:self-end lg:text-[3.6rem] lg:pr-[5.5rem]">
                     Igniting a Revolution in HR Innovation
                 </h1>
