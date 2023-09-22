@@ -1,6 +1,6 @@
-import iconBars from "../../assets/icon-bars.svg";
+import iconBars from "../assets/icon-bars.svg";
 import cn from "classnames";
-import iconTimes from "../../assets/icon-times.svg";
+import iconTimes from "../assets/icon-times.svg";
 import {ReactNode, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 

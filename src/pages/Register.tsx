@@ -1,6 +1,6 @@
 import "./Register.css";
 import walking from "../assets/walking.png";
-import Header from "../components/Landing/Header.tsx";
+import Header from "../components/Header.tsx";
 import thumbsUpMan from "../assets/3d-graphic-designer-showing-thumbs-up-png 1.png";
 import {Link} from "react-router-dom";
 
