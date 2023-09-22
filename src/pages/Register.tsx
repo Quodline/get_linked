@@ -61,7 +61,7 @@ function Register() {
                 <div className="absolute top-0 w-screen">
                     <Header registerButtonComponent={
                         <Link to="/register"
-                              className="bg-[url('./assets/Register%20Button.png')] w-[17.2rem] h-[5.3rem] inline-grid place-items-center">Register</Link>
+                              className="bg-[url('./assets/Register-Button.png')] w-[17.2rem] h-[5.3rem] inline-grid place-items-center">Register</Link>
                     }/>
                 </div>
                 <div className="basis-[45.8%] self-stretch grid place-items-center left-image pt-[14.1rem]">
