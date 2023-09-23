@@ -1,0 +1,56 @@
+body {
+    @apply bg-brand-dark text-white font-montserrat text-[1.3rem] font-normal;
+}
+
+.button-primary {
+    @apply rounded-[.4rem] px-[5.2rem] py-[1.6rem] font-montserrat text-[1.6rem];
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+}
+
+.navbar-link {
+    @apply font-inter text-[1.8rem] font-medium pt-4 -tracking-widest lg:tracking-normal lg:font-montserrat lg:text-[1.6rem] lg:font-normal lg:ml-[5.6rem];
+}
+
+.navbar-link.active {
+    background: linear-gradient(90deg, #903AFF 3.08%, #FF26B9 93.85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.countdown {
+    @apply flex font-unica text-[4.8rem] leading-[6.38rem] mt-[1.42rem] lg:mt-[7.7rem] lg:mb-[9.5rem] lg:text-[6.4rem] lg:leading-[8.51rem];
+}
+
+.countdown-item small {
+    @apply font-montserrat text-[1.4rem] leading-[1.86rem];
+}
+
+.banner-section {
+    @apply flex flex-col lg:flex-row lg:items-center border-t border-fade-gray;
+}
+
+.section-content {
+    @apply text-[1.2rem] lg:text-[1.4rem];
+}
+
+.section-content h3 {
+    @apply font-clash-display text-[2rem] font-bold leading-[2.66rem] py-[.9rem] lg:text-[3.2rem] lg:leading-[3.66rem] lg:py-[1.6rem];
+}
+
+.section-content-text {
+    @apply leading-[2.75rem] text-center lg:text-left;
+}
+
+.judges-criteria {
+    @apply section-content-text pt-[.7rem] pb-4;
+}
+
+.judges-criteria h4 {
+    @apply inline text-brand-pink font-bold text-[1.3rem] lg:text-[1.6rem] leading-[2.26rem];
+}
+
+.timeline-event-number {
+    @apply rounded-full w-[1.93rem] h-[1.93rem] inline-grid place-items-center font-bold text-[1.2rem];
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+}

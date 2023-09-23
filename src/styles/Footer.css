@@ -1,7 +1,0 @@
-footer {
-    @apply flex flex-col bg-[#100B20] pl-[6.8rem] pr-[5.1rem] pt-[5.1rem] text-[1.2rem] lg:flex-row lg:flex-wrap justify-around;
-}
-
-.section-heading {
-    @apply text-[1.4rem] leading-[2.41rem] font-semibold text-brand-purple-2;
-}
