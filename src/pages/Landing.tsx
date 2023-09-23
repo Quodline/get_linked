@@ -14,7 +14,7 @@ import Footer from "../components/Landing/Footer.tsx";
 
 function Landing() {
     return <>
-        <header role="banner" className="landing-header flex flex-col min-h-[85.5rem] lg:min-h-[90rem]">
+        <header role="banner" className="landing-header flex flex-col min-h-screen lg:min-h-[90rem]">
             <div className="border-b border-fade-gray">
                 <Header />
             </div>
