@@ -35,7 +35,7 @@ function Header({registerButtonComponent}: Prop) {
             </button>
         </nav>
         <nav
-            className={"bg-brand-dark pl-[4.7rem] fixed top-0 w-screen overflow-scroll transition-all duration-1000 lg:hidden" + ' ' + cn({
+            className={"bg-brand-dark pl-[4.7rem] fixed top-0 w-screen overflow-scroll transition-all duration-1000 lg:hidden z-50" + ' ' + cn({
                 'h-screen': showNav,
                 'h-0': !showNav,
                 'opacity-0': !showNav,
