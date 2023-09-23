@@ -1,7 +1,14 @@
 import theBigIdea from "../../assets/the big idea 1.png";
+import {useEffect, useRef, useState} from "react";
+import observer from "../../observer.ts";
+import cn from "classnames";
 
 function Introduction() {
-    return <section id="overview" className="landing-section">
+    const [isVisible, setVisible] = useState(true);
+    const domRef = useRef<HTMLElement>(null);
+    useEffect(observer(domRef, setVisible), []);
+
+    return <section ref={domRef} id="overview" className={cn("landing-section fade-in-section", {'is-visible': isVisible})}>
         <div className="flex justify-end px-[7.1rem] py-[2.9rem] lg:pr-[10.9rem] lg:py-[6.2rem] lg:basis-1/2">
             <img src={theBigIdea} alt=""/>
         </div>

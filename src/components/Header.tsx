@@ -4,6 +4,8 @@ import iconTimes from "../assets/icon-times.svg";
 import {ReactNode, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 
+import "../styles/Header.css";
+
 interface Prop {
     registerButtonComponent?: ReactNode
 }

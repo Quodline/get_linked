@@ -23,7 +23,7 @@ function TimelineEventDesktop({id, title, description, date, orientation = 'left
                 '!h-1/2': isLast,
             })}></div>
             <div className="p-[1.1rem] bg-brand-dark">
-                <span className="timeline-event-number-desktop">{id}</span>
+                <span className="timeline-eventNumber__desktop">{id}</span>
             </div>
         </div>
         <div className={cn("text-brand-purple-2 text-[2.4rem] font-bold leading-normal px-[12rem]", {

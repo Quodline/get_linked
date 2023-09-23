@@ -1,4 +1,5 @@
 import '../styles/Contact.css';
+
 import iconAngleLeft from "../assets/icon-angle-left.svg";
 import igIcon from "../assets/mdi_instagram.svg";
 import xIcon from "../assets/twitter.svg";
@@ -8,7 +9,7 @@ import {Link} from "react-router-dom";
 import Header from "../components/Header.tsx";
 
 function Contact() {
-    return <header className="flex flex-col min-h-screen">
+    return <header className="contact-header flex flex-col min-h-screen">
         <div className="mobile-view lg:hidden">
             <Link to="/" className="w-[2.3rem] h-[2.3rem] mx-[5.1rem] my-[4.7rem]  inline-grid place-items-center bg-[url('./assets/gradient-circle.svg')]">
                 <img src={iconAngleLeft} alt="Back"/>

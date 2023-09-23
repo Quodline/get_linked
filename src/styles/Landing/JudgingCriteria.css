@@ -1,0 +1,22 @@
+#criteria {
+    background-blend-mode: saturation;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -20rem calc(100% + 20rem), calc(100% + 50rem) calc(100% + 40rem);
+    background-image: url('../../assets/Purple-Lens-Flare-PNG.png'), url('../../assets/Purple-Lens-Flare-PNG.png');
+    background-color: #150E28aa;
+}
+
+@media screen and (max-width: 1024px) {
+    #criteria {
+        background-position: -5rem 10rem, calc(100% + 20rem) bottom;
+    }
+}
+
+.criterion {
+    @apply leading-[2.75rem] text-center pt-[.7rem] pb-4 lg:text-left;
+}
+
+.criterion h4 {
+    @apply inline text-brand-purple-2 font-bold text-[1.3rem] lg:text-[1.6rem] leading-[2.26rem];
+}

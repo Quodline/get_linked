@@ -1,4 +1,5 @@
-import "../styles/Landing.css";
+import "../styles/Landing/Landing.css";
+
 import Header from "../components/Header.tsx";
 import Introduction from "../components/Landing/Introduction.tsx";
 import Guidelines from "../components/Landing/Guidelines.tsx";
@@ -13,7 +14,7 @@ import Footer from "../components/Landing/Footer.tsx";
 
 function Landing() {
     return <>
-        <header role="banner" className="flex flex-col min-h-[85.5rem] lg:min-h-[90rem]">
+        <header role="banner" className="landing-header flex flex-col min-h-[85.5rem] lg:min-h-[90rem]">
             <div className="border-b border-fade-gray">
                 <Header />
             </div>

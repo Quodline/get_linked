@@ -1,0 +1,4 @@
+#faq {
+    background-blend-mode: saturation;
+    background: #150E28aa url('../../assets/Purple-Lens-Flare-PNG.png') calc(100% + 50rem) -40rem / contain no-repeat;
+}

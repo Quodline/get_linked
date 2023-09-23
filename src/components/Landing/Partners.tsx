@@ -1,4 +1,4 @@
-import '../../styles/Partners.css';
+import '../../styles/Landing/Partners.css';
 
 import libertyAssured from '../../assets/libertyAssured.png';
 import libertyPay from '../../assets/libertyPay.png';
@@ -6,9 +6,16 @@ import winwise from '../../assets/winwise.png';
 import wisper from '../../assets/wisper.png';
 import paybox from '../../assets/Paybox.png';
 import vuzual from '../../assets/vuzual.png';
+import {useEffect, useRef, useState} from "react";
+import observer from "../../observer.ts";
+import cn from "classnames";
 
 function Partners() {
-    return <section className="section-content flex flex-col px-[5.2rem] pt-[4.1rem]">
+    const [isVisible, setVisible] = useState(true);
+    const domRef = useRef<HTMLElement>(null);
+    useEffect(observer(domRef, setVisible), []);
+
+    return <section ref={domRef} id="partners" className={cn("section-content flex flex-col px-[5.2rem] pt-[4.1rem] fade-in-section", {'is-visible': isVisible})}>
         <h3 className="text-center">Partners and Sponsors</h3>
         <p className="leading-[2.75rem] text-center self-center lg:w-[45.2rem]">
             Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors
@@ -29,7 +36,7 @@ function Partners() {
             <div className="partnerList-partner border-r-2 px-[1.3rem] lg:px-[4.9rem] pt-[.86rem] lg:pt-[2.28rem]">
                 <img src={paybox} alt="Paybox"/>
             </div>
-            <div className="partnerList-partner pl-[1.3rem] lg:pl-[4.9rem] pt-[.86rem] lg:pt-[2.28rem]">
+            <div className="partnerList-partner exclude-after pl-[1.3rem] lg:pl-[4.9rem] pt-[.86rem] lg:pt-[2.28rem]">
                 <img src={vuzual} alt="Vuzual Plus"/>
             </div>
         </div>

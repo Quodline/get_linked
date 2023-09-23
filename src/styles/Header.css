@@ -1,0 +1,10 @@
+.navbar-link {
+    @apply font-inter text-[1.8rem] font-medium pt-4 -tracking-widest lg:tracking-normal lg:font-montserrat
+        lg:text-[1.6rem] lg:font-normal lg:ml-[5.6rem];
+}
+
+.navbar-link.active {
+    background: linear-gradient(90deg, #903AFF 3.08%, #FF26B9 93.85%);
+    @apply bg-clip-text;
+    -webkit-text-fill-color: transparent;
+}

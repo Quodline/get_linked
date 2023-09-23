@@ -62,7 +62,7 @@ function Register() {
         setModalVisible(true);
     }
 
-    return <header className={cn("flex flex-col min-h-screen", {'h-screen overflow-hidden': modalVisible})}>
+    return <header className={cn("register-header flex flex-col min-h-screen", {'h-screen overflow-hidden': modalVisible})}>
         <RegisterMobile
             data={{categories}}
             fields={{email, phoneNumber, teamName, groupSize, projectTopic, category, privacyPolicyAccepted}}

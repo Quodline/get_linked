@@ -2,13 +2,22 @@ import events from "../../data/timeline.ts";
 import TimelineEventMobile from "./Timeline/TimelineEventMobile.tsx";
 import TimelineEventDesktop from "./Timeline/TimelineEventDesktop.tsx";
 
+import "../../styles/Landing/Timeline.css";
+import {useEffect, useRef, useState} from "react";
+import observer from "../../observer.ts";
+import cn from "classnames";
+
 function Timeline() {
-    return <section id="timeline" className="landing-section flex flex-col">
+    const [isVisible, setVisible] = useState(true);
+    const domRef = useRef<HTMLElement>(null);
+    useEffect(observer(domRef, setVisible), []);
+
+    return <section ref={domRef} id="timeline" className={cn("landing-section flex flex-col fade-in-section fade-in-section", {'is-visible': isVisible})}>
         <div className="section-content py-[8rem] px-[4.5rem] lg:px-0 lg:basis-1/2">
             <h3 className="text-center">Timeline</h3>
             <p className="section-content-text text-[1.4rem] leading-[2.41rem] mb-[5.6rem] lg:text-center lg:w-[34.6rem] lg:mx-auto">
-                Here is the breakdown of the time we
-                anticipate using for the upcoming event.</p>
+                Here is the breakdown of the time we anticipate using for the upcoming event.
+            </p>
             <div className="flex flex-col space-y-[2.3rem] lg:space-y-0">
                 <div className="hidden lg:flex h-[9.4rem]">
                     <div className="basis-1/2"></div>

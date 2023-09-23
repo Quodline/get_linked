@@ -3,8 +3,17 @@ import silverMedal from "../../assets/silver_medal 1.png";
 import goldMedal from "../../assets/gold_medal 1.png";
 import bronzeMedal from "../../assets/bronze_medal 1.png";
 
+import "../../styles/Landing/Prize.css";
+import {useEffect, useRef, useState} from "react";
+import observer from "../../observer.ts";
+import cn from "classnames";
+
 function Prizes() {
-    return <section className="border-t border-fade-gray flex flex-col">
+    const [isVisible, setVisible] = useState(true);
+    const domRef = useRef<HTMLElement>(null);
+    useEffect(observer(domRef, setVisible), []);
+
+    return <section ref={domRef} id="rewards" className={cn("border-t border-fade-gray flex flex-col fade-in-section fade-in-section", {'is-visible': isVisible})}>
         <div className="section-content self-end px-[4.5rem] lg:px-[27rem] lg:basis-1/2">
             <h3 className="text-center lg:text-left mt-[7.2rem]">
                 Prizes and<br/><span className="text-brand-purple-2">Rewards</span>

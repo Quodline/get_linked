@@ -1,7 +1,18 @@
 import userPrivacy from "../../assets/user-privacy.png";
+import "../../styles/Landing/Privacy.css";
+import {useEffect, useRef, useState} from "react";
+import observer from "../../observer.ts";
+import cn from "classnames";
 
 function Privacy() {
-    return <section id="privacy" className="landing-section flex flex-col lg:flex-row lg:items-center pt-[7.1rem] lg:pt-[16.9rem] lg:pb-[11.5rem]">
+    const [isVisible, setVisible] = useState(true);
+    const domRef = useRef<HTMLElement>(null);
+    useEffect(observer(domRef, setVisible), []);
+
+    return <section ref={domRef} id="privacy" className={cn(
+        "landing-section flex flex-col lg:flex-row lg:items-center pt-[7.1rem] lg:pt-[16.9rem] lg:pb-[11.5rem] lg:pl-[14.2rem] fade-in-section", {
+            'is-visible': isVisible
+        })}>
         <div className="section-content pb-[4.6rem] px-[4.5rem] lg:pl-[18.4rem] lg:basis-3/5">
             <h3 className="section-content-text">
                 Privacy Policy and<br/><span className="text-brand-purple-2">Terms</span>

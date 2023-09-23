@@ -1,7 +1,17 @@
 import rulesAndGuidelines from "../../assets/rules and guidelines.png";
+import "../../styles/Landing/Guidelines.css";
+import {useEffect, useRef, useState} from "react";
+import cn from "classnames";
+import observer from "../../observer.ts";
 
 function Guidelines() {
-    return <section className="landing-section flex flex-col lg:flex-row lg:items-center">
+    const [isVisible, setVisible] = useState(true);
+    const domRef = useRef<HTMLElement>(null);
+    useEffect(observer(domRef, setVisible), []);
+
+    return <section ref={domRef} id="guidelines" className={cn("landing-section flex flex-col lg:flex-row lg:items-center fade-in-section", {
+        'is-visible': isVisible,
+    })}>
         <div className="flex justify-start px-[4.8rem] py-[1rem] lg:basis-1/2 lg:order-1">
             <img src={rulesAndGuidelines} alt=""/>
         </div>

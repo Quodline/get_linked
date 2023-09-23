@@ -1,0 +1,43 @@
+#rewards {
+    background-blend-mode: saturation;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0, calc(100% + 50rem) calc(100% + 20rem);
+    background-image: url('../../assets/Purple-Lens-Flare-PNG.png'), url('../../assets/Purple-Lens-Flare-PNG.png');
+    background-color: #150E28aa;
+}
+
+@media screen and (max-width: 1024px) {
+    #rewards {
+        background-position: -5rem 12rem, calc(100% + 20rem) bottom;
+    }
+}
+
+.prize {
+    @apply relative flex flex-col items-center justify-end pt-[4.15rem] pb-[2.1rem] rounded-[.8rem] border
+    border-brand-purple-2 bg-[#D434FE1E] px-[.9rem] lg:px-[3rem] lg:pt-[11.1rem];
+}
+
+.prize-gold {
+    @apply prize !bg-[#903AFF1E] !border-brand-purple !static !pt-[6.86rem] lg:!pt-[14.9rem];
+}
+
+.prize-title {
+    @apply font-semibold leading-[1.7rem] text-center lg:text-[2.4rem] lg:leading-[3.19rem];
+}
+
+.prize-title span {
+    @apply lg:text-[3.6rem];
+}
+
+.prize-amount {
+    @apply text-[1.4rem] font-bold leading-[3.03rem] text-brand-purple-2 lg:text-[3.2rem] lg:leading-[6.92rem];
+}
+
+.prize-medal {
+    @apply w-[7.5rem] h-[7.5rem] absolute top-[-3.56rem] lg:!top-[-8.4rem] lg:w-[18rem] lg:h-[18rem];
+}
+
+.prize-medal-gold {
+    @apply absolute top-[-6.24rem] w-[12.5rem] h-[12.5rem] lg:top-[-12.6rem] lg:w-[29.6rem] lg:h-[29.6rem];
+}

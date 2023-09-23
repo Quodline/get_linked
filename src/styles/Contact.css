@@ -2,3 +2,13 @@
     @apply px-[2.4rem] py-[1.3rem] text-[1.6rem] leading-normal rounded-[.4rem] border border-white bg-[#FFFFFF07] resize-none;
     box-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, 0.25);
 }
+
+.contact-header {
+    background-blend-mode: saturation;
+    background: #150E28aa url('../assets/Purple-Lens-Flare-PNG.png') calc(100% + 50rem) calc(100% + 40rem) / contain no-repeat;
+}
+
+.contact-header .desktop_view {
+    background-blend-mode: saturation;
+    background: #150E28aa url('../assets/Purple-Lens-Flare-PNG.png') -31.25rem calc(50% - 10.9rem) / contain no-repeat;
+}

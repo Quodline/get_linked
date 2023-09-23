@@ -1,0 +1,58 @@
+.landing-header {
+    background-blend-mode: saturation;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0, calc(100% + 25rem) top;
+    @apply bg-[left_top,calc(100%_+_25rem)_top];
+    background-image: url('../../assets/Purple-Lens-Flare-PNG.png'), url('../../assets/Purple-Lens-Flare-PNG.png');
+    background-color: #150E28aa;
+}
+
+@media screen and (max-width: 1024px) {
+    .landing-header {
+        background-position: -12rem 0, 300rem;
+        background-size: 150%;
+    }
+}
+
+.button__primary {
+    @apply rounded-[.4rem] px-[5.2rem] py-[1.6rem] font-montserrat text-[1.6rem];
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+}
+
+.button__small {
+    @apply rounded-[.4rem] px-[1.4rem] py-[.8rem] text-[1.2rem] lg:text-[1.6rem] lg:px-[4.2rem] lg:py-[1.6rem];
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+}
+
+.landing-section {
+    @apply flex flex-col lg:flex-row lg:items-center border-t border-fade-gray;
+}
+
+.section-content {
+    @apply text-[1.2rem] lg:text-[1.4rem];
+}
+
+.section-content h3 {
+    @apply font-clash-display text-[2rem] font-bold leading-[2.66rem] py-[.9rem] lg:text-[3.2rem] lg:leading-[3.66rem]
+    lg:py-[1.6rem];
+}
+
+.section-content-text {
+    @apply leading-[2.75rem] text-center lg:text-left;
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+

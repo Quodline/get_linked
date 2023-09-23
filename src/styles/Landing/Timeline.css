@@ -1,0 +1,11 @@
+.timeline-id-bg {
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+}
+
+.timeline-eventNumber {
+    @apply rounded-full w-[1.93rem] h-[1.93rem] inline-grid place-items-center font-bold text-[1.2rem] timeline-id-bg;
+}
+
+.timeline-eventNumber__desktop {
+    @apply w-[5.3rem] h-[5.3rem] timeline-id-bg inline-grid place-items-center font-bold text-[2.4rem] rounded-full;
+}

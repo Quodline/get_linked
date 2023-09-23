@@ -1,0 +1,15 @@
+#privacy {
+    background-blend-mode: saturation;
+    background: #150E28aa url('../../assets/Purple-Lens-Flare-PNG.png') -30rem calc(100% + 40rem) / contain no-repeat;
+}
+
+@media screen and (max-width: 1024px) {
+    #privacy {
+        background-blend-mode: saturation;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/Purple-Lens-Flare-PNG.png'), url('../../assets/Purple-Lens-Flare-PNG.png');
+        background-color: #150E28aa;
+        background-position: -10rem center, calc(100% + 20rem) -20rem;
+        background-size: 100%;
+    }
+}

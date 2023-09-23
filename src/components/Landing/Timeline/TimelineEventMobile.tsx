@@ -5,7 +5,7 @@ function TimelineEventMobile(props: TimelineEventProp) {
             <p className="leading-[1.92rem]">{props.description}</p>
         </div>
         <div className="flex py-4 space-x-4">
-            <span className="timeline-event-number">{props.id}</span>
+            <span className="timeline-eventNumber">{props.id}</span>
             <span className="text-brand-purple-2 font-bold leading-normal">{props.date}</span>
         </div>
     </div>;

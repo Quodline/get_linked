@@ -1,0 +1,24 @@
+.banner-typedText {
+    @apply text-center mt-[3.1rem] font-montserrat text-[1.6rem] pb-[2rem] italic font-bold
+    bg-[url('../../assets/curve-line.png')] bg-no-repeat lg:self-end lg:text-[3.6rem] lg:mr-[5.5rem];
+    background-position: calc(100% - 3rem) bottom;
+    max-width: min-content;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation:
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 74rem }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
