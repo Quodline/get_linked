@@ -23,6 +23,7 @@ interface TimelineEventProp extends TimelineEvent {
 interface RegisterPageProp {
     data: {
         categories: Category[]
+        errors: {email, phone_number, team_name, group_size, project_topic, category, privacy_policy_accepted}
     },
     fields: {
         email, phoneNumber, teamName, groupSize, projectTopic, category, privacyPolicyAccepted

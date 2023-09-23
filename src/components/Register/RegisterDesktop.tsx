@@ -29,11 +29,13 @@ function RegisterDesktop({data, fields, handlers}: RegisterPageProp) {
                             <label htmlFor="teamName">Team's Name</label>
                             <input required id="teamName" className="input-control" value={fields.teamName}
                                    onChange={handlers.setTeamName} placeholder="Enter the name of your group"/>
+                            <div className="form-error">{data.errors.team_name}</div>
                         </div>
                         <div className="form-group">
                             <label htmlFor="phone">Phone</label>
                             <input required id="phone" className="input-control" value={fields.phoneNumber}
                                    onChange={handlers.setPhoneNumber} placeholder="Enter your phone number"/>
+                            <div className="form-error">{data.errors.phone_number}</div>
                         </div>
                     </div>
                     <div className="flex space-x-[3.2rem] flex-1">
@@ -41,11 +43,13 @@ function RegisterDesktop({data, fields, handlers}: RegisterPageProp) {
                             <label htmlFor="email">Email</label>
                             <input required id="email" className="input-control" value={fields.email}
                                    onChange={handlers.setEmail} placeholder="Enter your email address"/>
+                            <div className="form-error">{data.errors.email}</div>
                         </div>
                         <div className="form-group">
                             <label htmlFor="projectTopic">Project Topic</label>
                             <input required id="projectTopic" className="input-control" value={fields.projectTopic}
                                    onChange={handlers.setProjectTopic} placeholder="What is your group project topic"/>
+                            <div className="form-error">{data.errors.project_topic}</div>
                         </div>
                     </div>
                     <div className="flex space-x-[3.2rem]">
@@ -58,6 +62,7 @@ function RegisterDesktop({data, fields, handlers}: RegisterPageProp) {
                                     <option key={id} value={id}>{name}</option>
                                 )}
                             </select>
+                            <div className="form-error">{data.errors.category}</div>
                         </div>
                         <div className="form-group">
                             <label htmlFor="size">Group Size</label>
@@ -67,6 +72,7 @@ function RegisterDesktop({data, fields, handlers}: RegisterPageProp) {
                                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n =>
                                     <option key={n} value={n}>{n}</option>)}
                             </select>
+                            <div className="form-error">{data.errors.group_size}</div>
                         </div>
                     </div>
                 </div>
@@ -79,6 +85,7 @@ function RegisterDesktop({data, fields, handlers}: RegisterPageProp) {
                     <label htmlFor="terms" className="text-[1.2rem]">I agreed with the event terms and conditions
                         and privacy policy</label>
                 </div>
+                <div className="form-error">{data.errors.privacy_policy_accepted}</div>
                 <button className="button__primary self-center mt-[.6rem] mb-[6.5rem] w-full" onClick={handlers.submitForm}>Register Now</button>
             </div>
         </div>

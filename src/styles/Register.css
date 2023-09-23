@@ -21,3 +21,8 @@
 .form-group {
     @apply flex flex-col space-y-[.5rem] lg:flex-1;
 }
+
+.form-error {
+    @apply text-red-400 font-bold lg:text-[1.8rem];
+}
+

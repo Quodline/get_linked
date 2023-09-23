@@ -18,6 +18,9 @@ function Register() {
     const [projectTopic, setProjectTopic] = useState('');
     const [category, setCategory] = useState<Category['id']>(1);
     const [privacyPolicyAccepted, setPrivacyPolicyAccepted] = useState(false);
+    const [errors, setErrors] = useState(
+        {email: '', phone_number: '', team_name: '', group_size: '', project_topic: '', category: '', privacy_policy_accepted: ''}
+    );
 
     useEffect(() => {
         fetchCategories().then(setCategories);
@@ -48,7 +51,7 @@ function Register() {
     async function submitForm(event: Event) {
         event.preventDefault();
 
-        const {data} = await getLinkedApi.post('/hackathon/registration', {
+        const {data, status} = await getLinkedApi.post('/hackathon/registration', {
             email,
             phone_number: phoneNumber,
             team_name: teamName,
@@ -58,18 +61,25 @@ function Register() {
             privacy_policy_accepted: privacyPolicyAccepted,
         });
 
-        console.log(data)
-        setModalVisible(true);
+        if (status === 400) {
+            // @ts-ignore
+            const dataObj = Object.entries(data).reduce((obj, [k, v]: [string, Array<string>]) => {
+                return {...obj, [k]: v[0] || ''}
+            }, {});
+            setErrors({...errors, ...dataObj});
+        } else {
+            setModalVisible(true);
+        }
     }
 
     return <header className={cn("register-header flex flex-col min-h-screen", {'h-screen overflow-hidden': modalVisible})}>
         <RegisterMobile
-            data={{categories}}
+            data={{categories, errors}}
             fields={{email, phoneNumber, teamName, groupSize, projectTopic, category, privacyPolicyAccepted}}
             handlers={handlers()}
         />
         <RegisterDesktop
-            data={{categories}}
+            data={{categories, errors}}
             fields={{email, phoneNumber, teamName, groupSize, projectTopic, category, privacyPolicyAccepted}}
             handlers={handlers()}
         />

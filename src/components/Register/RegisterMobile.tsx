@@ -15,21 +15,25 @@ function RegisterMobile({ data, fields, handlers }: RegisterPageProp) {
                 <label htmlFor="teamName">Team's Name</label>
                 <input id="teamName" className="input-control" placeholder="Enter the name of your group"
                        value={fields.teamName} onChange={handlers.setTeamName}/>
+                <div className="form-error">{data.errors.team_name}</div>
             </div>
             <div className="form-group">
                 <label htmlFor="phone">Phone</label>
                 <input id="phone" className="input-control" placeholder="Enter your phone number"
                        value={fields.phoneNumber} onChange={handlers.setPhoneNumber}/>
+                <div className="form-error">{data.errors.phone_number}</div>
             </div>
             <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input id="email" className="input-control" placeholder="Enter your email address"
                        value={fields.email} onChange={handlers.setEmail}/>
+                <div className="form-error">{data.errors.email}</div>
             </div>
             <div className="form-group">
                 <label htmlFor="projectTopic">Project Topic</label>
                 <input id="projectTopic" className="input-control" placeholder="What is your group project topic"
                        value={fields.projectTopic} onChange={handlers.setProjectTopic}/>
+                <div className="form-error">{data.errors.project_topic}</div>
             </div>
             <div className="flex space-x-[1.9rem]">
                 <div className="form-group basis-3/5">
@@ -41,6 +45,7 @@ function RegisterMobile({ data, fields, handlers }: RegisterPageProp) {
                             <option key={id} value={id}>{name}</option>
                         )}
                     </select>
+                    <div className="form-error">{data.errors.category}</div>
                 </div>
                 <div className="form-group flex-1">
                     <label htmlFor="size">Group Size</label>
@@ -50,6 +55,7 @@ function RegisterMobile({ data, fields, handlers }: RegisterPageProp) {
                         {[1,2,3,4,5,6,7,8,9,10].map(n =>
                             <option key={n} value={n}>{n}</option>)}
                     </select>
+                    <div className="form-error">{data.errors.group_size}</div>
                 </div>
             </div>
         </div>
@@ -62,6 +68,7 @@ function RegisterMobile({ data, fields, handlers }: RegisterPageProp) {
             <label htmlFor="terms" className="text-[1rem]">I agreed with the event terms and conditions and privacy
                 policy</label>
         </div>
+        <div className="form-error">{data.errors.privacy_policy_accepted}</div>
         <button className="button__primary self-center mt-[.2rem] mb-[2.4rem]" onClick={handlers.submitForm}>Submit</button>
     </div>;
 }
