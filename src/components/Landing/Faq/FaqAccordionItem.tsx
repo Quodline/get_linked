@@ -4,10 +4,10 @@ import cn from "classnames";
 function FaqAccordionItem(props: FaqAccordionItem) {
     const [expanded, setExpanded] = useState(false);
 
-    return <div className="border-b border-brand-pink pt-[1.33rem] pb-[.9rem]">
+    return <div className="border-b border-brand-purple-2 pt-[1.33rem] pb-[.9rem]">
         <div className="flex justify-between items-end">
             <h4 className="leading-[1.8rem] flex-1">{props.title}</h4>
-            <button className="text-brand-pink text-[2rem] leading-[1rem]" onClick={() => setExpanded(!expanded)}>
+            <button className="text-brand-purple-2 text-[2rem] leading-[1rem]" onClick={() => setExpanded(!expanded)}>
                 {expanded ? '-' : '+'}
             </button>
         </div>
