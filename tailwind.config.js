@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 export default {
   content: [
     "./index.html",
@@ -8,7 +11,7 @@ export default {
     extend: {
       colors: {
         "brand-dark": '#150E28',
-        "brand-pink": '#D434FE',
+        "brand-purple-2": '#D434FE',
         "brand-purple": '#903AFF',
         "fade-gray": '#FFFFFF2D',
       },
@@ -19,7 +22,10 @@ export default {
         'unica': ['Unica One', 'sans-serif'],
       }
     },
+    screens: {
+      'xs': '360px',
+      ...defaultTheme.screens,
+    }
   },
-  plugins: [],
 }
 
