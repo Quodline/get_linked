@@ -26,7 +26,7 @@ function Header({registerButtonComponent}: Prop) {
                 <a className="navbar-link" href="/#timeline">Timeline</a>
                 <a className="navbar-link" href="/#overview">Overview</a>
                 <a className="navbar-link" href="/#faq">FAQs</a>
-                <a className={cn("navbar-link", {active: location.pathname === '/contact'})} href="/contact">Contact</a>
+                <Link className={cn("navbar-link", {active: location.pathname === '/contact'})} to="/contact">Contact</Link>
             </div>
             {registerButtonComponent ||
                 <Link to="/register" className="hidden lg:inline button__primary">Register</Link>}
@@ -50,7 +50,7 @@ function Header({registerButtonComponent}: Prop) {
                 <a className="navbar-link" href="/#timeline">Timeline</a>
                 <a className="navbar-link" href="/#overview">Overview</a>
                 <a className="navbar-link" href="/#faq">FAQs</a>
-                <a className="navbar-link" href="/contact">Contact</a>
+                <Link className="navbar-link" to="/contact">Contact</Link>
             </div>
             <Link to="/register" className="button__primary">Register</Link>
         </nav>
