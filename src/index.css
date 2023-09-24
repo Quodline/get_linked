@@ -29,7 +29,7 @@ body {
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
     position: relative;
-    height: 100vh;
+    height: clamp(97rem, 100vh, 98rem);
     width: 100%;
     overflow: hidden;
     padding:0;
@@ -77,7 +77,7 @@ body {
     top: 10vh;
 }
 /* ================= Header ============ */
-header{
+.main-container{
     position: absolute;
     top:0;
     left: 0;

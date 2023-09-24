@@ -15,11 +15,13 @@ function App() {
                     <div className="star"></div>
                     <div className="star"></div>
                 </div>
-                <Routes>
-                    <Route path="/" element={<Landing />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/register" element={<Register />} />
-                </Routes>
+                <div className="main-container">
+                    <Routes>
+                        <Route path="/" element={<Landing />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/register" element={<Register />} />
+                    </Routes>
+                </div>
             </div>
         </>
     )
