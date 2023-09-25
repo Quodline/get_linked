@@ -25,7 +25,6 @@ body {
 }
 
 .background {
-    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
     position: relative;
