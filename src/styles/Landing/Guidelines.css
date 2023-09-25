@@ -5,8 +5,6 @@
     background-position: -10rem 0, calc(100% + 40rem) calc(100% + 20rem);
     background-image: url('../../assets/Purple-Lens-Flare-PNG.png'), url('../../assets/Purple-Lens-Flare-PNG.png');
     background-color: #150E28aa;
-    margin-top: -5rem;
-    padding-top: 5rem;
 }
 
 @media screen and (max-width: 1024px) {
